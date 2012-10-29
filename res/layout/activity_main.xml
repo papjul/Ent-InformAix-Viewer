@@ -1,0 +1,75 @@
+<!-- 
+ * 	LICENSE
+ * 
+ * 	This file is part of Ent InformAix Viewer.
+ *
+ *  Ent InformAix Viewer is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Ent InformAix Viewer is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Ent InformAix Viewer.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <ImageButton
+        android:id="@+id/btnPrecedent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/btnSuivant"
+        android:src="@drawable/ic_fleche_precedent" />
+
+    <ImageButton
+        android:id="@+id/btnSuivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_fleche_suivant" />
+
+    <ImageButton
+        android:id="@+id/btnActu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_actualiser" />
+
+    <TextView
+        android:id="@+id/labelSuivant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnSuivant"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/labelPrecedent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btnPrecedent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="0" />
+
+</RelativeLayout>

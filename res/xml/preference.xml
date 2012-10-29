@@ -1,0 +1,106 @@
+<!-- 
+ * 	LICENSE
+ * 
+ * 	This file is part of Ent InformAix Viewer.
+ *
+ *  Ent InformAix Viewer is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Ent InformAix Viewer is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Ent InformAix Viewer.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <PreferenceCategory android:title="Classe/Année">
+	    <ListPreference 
+	        android:key="pref_groupe"
+	        android:title="Groupe"
+	        android:summary="Ouvrir liste de choix"
+	        android:dialogTitle="Groupe"
+	        android:entries="@array/nom_groupe"
+	        android:entryValues="@array/value_groupe"
+	        android:defaultValue="@string/value_groupe_defaut"
+	        />
+	    
+	    <ListPreference 
+	        android:key="pref_sous_groupe"
+	        android:title="Sous-Groupe"
+	        android:summary="Ouvrir liste de choix"
+	        android:dialogTitle="Sous-Groupe"
+	        android:entries="@array/nom_sous_groupe"
+	        android:entryValues="@array/value_sous_groupe"
+	        android:defaultValue="@string/value_sous_groupe_defaut"
+	        />
+	    
+	    <EditTextPreference
+	        android:key="pref_sem"
+	        android:title="Semaine départ"
+	        android:summary="Numéro de la semaine"
+	        android:dialogTitle="Numéro de la semaine"
+	        android:dialogMessage="Numéro de la semaine du début de l'emplois du temps"
+	        android:defaultValue="33"
+	        />
+	</PreferenceCategory>
+	
+    <PreferenceCategory android:title="Affichage général">
+        <CheckBoxPreference 
+            android:key="pref_affichage_auto"
+            android:title="Taille automatique"
+            android:summary="Le programme choisie la meilleur taille."
+            android:defaultValue="true"
+            />
+    </PreferenceCategory>
+	
+	<PreferenceCategory android:title="Affichage semaine">
+	    <CheckBoxPreference
+	        android:key="pref_check_lun"
+	        android:title="Lundi"
+	        android:summary="Afficher le Lundi"
+	        android:defaultValue="true"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_mar"
+	        android:title="Mardi"
+	        android:summary="Afficher le Mardi"
+	        android:defaultValue="true"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_mer"
+	        android:title="Mercredi"
+	        android:summary="Afficher le Mercredi"
+	        android:defaultValue="true"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_jeu"
+	        android:title="Jeudi"
+	        android:summary="Afficher le Jeudi"
+	        android:defaultValue="true"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_ven"
+	        android:title="Vendredi"
+	        android:summary="Afficher le Vendredi"
+	        android:defaultValue="true"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_sam"
+	        android:title="Samedi"
+	        android:summary="Afficher le Samedi"
+	        android:defaultValue="false"
+	       	/>
+	    <CheckBoxPreference
+	        android:key="pref_check_dim"
+	        android:title="Dimanche"
+	        android:summary="Afficher le Dimanche"
+	        android:defaultValue="false"
+	       	/>
+	</PreferenceCategory>
+</PreferenceScreen>

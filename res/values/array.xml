@@ -1,0 +1,85 @@
+<!-- 
+ * 	LICENSE
+ * 
+ * 	This file is part of Ent InformAix Viewer.
+ *
+ *  Ent InformAix Viewer is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Ent InformAix Viewer is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Ent InformAix Viewer.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<resources>
+    
+    <!-- Tableau pour les groupe -->
+    <string-array name="nom_groupe">
+    	<item>Gr 1 An 1</item>
+       	<item>Gr 2 An 1</item>
+       	<item>Gr 3 An 1</item>
+       	<item>Gr 4 An 1</item>
+        <item>Gr 5 An 1</item>
+        <item>Gr 1 An 2</item>
+        <item>Gr 2 An 2</item>
+        <item>Gr 3 An 2</item>
+        <item>Gr 4 An 2</item>
+        <item>Licence Pro.</item>
+    </string-array>
+    
+    <string-array name="value_groupe">
+        <item>8385</item>
+        <item>8387</item>
+        <item>8389</item>
+        <item>8391</item>
+        <item>8393</item>
+        <item>8400</item>
+        <item>8403</item>
+        <item>8405</item>
+        <item>3772</item>
+        <item>8408</item>
+    </string-array>
+    
+    
+    <!-- Tableau pour les sous groupe -->
+    <string-array name="nom_sous_groupe">
+        <item>A</item>
+        <item>B</item>
+        <item>Les deux</item>
+    </string-array>
+    
+    <string-array name="value_sous_groupe">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+    
+    
+    <!-- Tableau pour les jours -->
+    <string-array name="nom_jour">
+        <item>Lundi</item>
+        <item>Mardi</item>
+        <item>Mercredi</item>
+        <item>Jeudi</item>
+        <item>Vendredi</item>
+        <item>Samedi</item>
+        <item>Dimanche</item>
+    </string-array>
+    
+    <string-array name="value_jour">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+</resources>
