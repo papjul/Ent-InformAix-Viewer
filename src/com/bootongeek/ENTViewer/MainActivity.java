@@ -55,6 +55,9 @@ import android.widget.Toast;
  * 			soit TOUJOURS à la taille de l'écran de l'utilisateur
  * 		- Ajout du bouton "Annuler" lors du chargement '(via internet) du planning.
  * 		- Modification message dans ProgressDialog
+ * 
+ * v1.3:
+ * 		- Ajout d'un champ dans les préférences pour modifier l'identifiant générateur.
  */
 
 public class MainActivity extends Activity {
@@ -223,9 +226,11 @@ public class MainActivity extends Activity {
 	}
 
 	private void actualiserWebView() {
+		pref = PreferenceManager.getDefaultSharedPreferences(this);
 		String tmp = "";
 
-		tmp += "http://planning.univmed.fr/ade/imageEt?identifier=8ba834238410a5a92ecb1729024b7871&projectId=22";
+		tmp += "http://planning.univmed.fr/ade/imageEt?identifier=" + pref.getString("pref_id_gen", "");
+		tmp += "&projectId=22";
 		tmp += "&idPianoWeek=" + calculeNumeroSemaine();
 		tmp += "&idPianoDay=" + genererPianoDay();
 		tmp += "&idTree=" + genererIdTree();
@@ -238,6 +243,7 @@ public class MainActivity extends Activity {
 		tmp += "&displayConfId=41";
 
 		wView.loadUrl(tmp);
+		System.out.println(tmp);
 
 		prgDialog.show();
 		appliquerValeurBoutonSemaine();

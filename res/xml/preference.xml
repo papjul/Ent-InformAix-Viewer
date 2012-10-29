@@ -48,6 +48,16 @@
 	        android:dialogMessage="Numéro de la semaine du début de l'emplois du temps"
 	        android:defaultValue="33"
 	        />
+	    
+	    <EditTextPreference 
+	        android:key="pref_id_gen"
+	        android:title="Code d'indentification"
+	        android:summary="Code d'intentification"
+	        android:dialogTitle="Code d'indentification générateur d'image"
+	        android:dialogMessage="Code d'indentification pour la genération URL du planning"
+	        android:defaultValue="7f7f85f8426111cc0dc6ad7eb62e7699"
+	        />
+	    
 	</PreferenceCategory>
 	
     <PreferenceCategory android:title="Affichage général">
