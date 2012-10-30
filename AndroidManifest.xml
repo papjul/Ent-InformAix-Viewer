@@ -45,6 +45,8 @@
             		android:name=".EditPreference">
         </activity>
         
+        <activity android:name=".AideActivity"></activity>
+        
     </application>
 
 </manifest>
