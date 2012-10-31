@@ -25,22 +25,20 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,13 +56,17 @@ import android.widget.Toast;
  * 
  * v1.3:
  * 		- Ajout d'un champ dans les préférences pour modifier l'identifiant générateur.
+ * 
+ * v1.4:
+ * 		- Ajout de l'aide
  */
 
 public class MainActivity extends Activity {
 
 	private final int PREF_ID = 0;
 	private final int ACTU_ID = 1;
-	private final int QUIT_ID = 2;
+	private final int AIDE_ID = 2;
+	private final int QUIT_ID = 3;
 
 	private final int LARGEUR_PLANNING_DEFAUT = 800;
 	private final int LONGUEUR_PLANNING_DEFAUT = 600;
@@ -73,18 +75,11 @@ public class MainActivity extends Activity {
 			"Si vous d&eacute;marrez cette application pour la premi&egrave;re fois, rendez-vous dans les " + 
 			"pr&eacute;f&eacute;rences (Option -> Pr&eacute;f&eacute;rences).<br />Si l'emploi du temps n'apparait " +
 			"pas et que vous avez une erreur : <ul><li>V&eacute;rifiez votre connexion internet</li><li>" +
-			"Actualisez la page (Option -> Actualiser)</li></ul><br /><div style=\"text-align: center;\">" +
-			"Logiciel cr&eacute;&eacute; par Jonathan BAUDIN<br /><a href=\"http://www.bootongeek.com/\">" + 
-			"http://www.bootongeek.com/</a><br />Sous licence <a href=\"http://www.gnu.org/licenses/gpl.html\">GNU GPL</a>" +
-			"</div><br /><span style=\"text-color: blue\">Trucs et astuces :</span>" +
-			"<p>La <strong>Taille automatique</strong>" +
-			"(dans les pr&eacute;f&eacute;rences) peut prendre deux valeurs:<ul><li>Activ&eacute;e : " +
-			"Le programme choisie automatique la taille du planning.</li><li>D&eacute;sactiv&eacute;e : " +
-			"La taille du planning sera forc&eacute;e &agrave; la taille de votre &eacute;cran.</li></ul><br />" +
-			"La <strong>semaine en cours</strong> : <br />Le programme affiche la semaine en cours (&agrave; condition d'avoir " +
-			"bien r&eacute;gl&eacute; la semaine de d&eacute;part du planning). Donc si vous regardez le planning un dimanche, " +
-			"il sera afficher le planning de la semaine ACTUELLE donc pensez &agrave; vous d&eacute;placez d'une semaine ;-)" +
-			"</p></body></html>";
+			"V&eacute;rifiez les param&egrave;tres</li><li>Actualisez la page (Option -> Actualiser)</li>" +
+			"</ul><br /><div style=\"text-align: center;\">Logiciel cr&eacute;&eacute; par Jonathan BAUDIN<br />" +
+			"<a href=\"http://www.bootongeek.com/\">http://www.bootongeek.com/</a><br />Sous licence " +
+			"<a href=\"http://www.gnu.org/licenses/gpl.html\">GNU GPL</a></div><br />" +
+			"Pensez &agrave; consulter la section [Aide] (Menu > Aide)</body></html>";
 	
 	private int offsetWeek = 0, largFenetre = 0, longFenetre = 0;
 	private SharedPreferences pref;
@@ -201,6 +196,7 @@ public class MainActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		menu.add(Menu.NONE, PREF_ID, Menu.NONE, "Préférences");
 		menu.add(Menu.NONE, ACTU_ID, Menu.NONE, "Actualiser");
+		menu.add(Menu.NONE, AIDE_ID, Menu.NONE, "Aide");
 		menu.add(Menu.NONE, QUIT_ID, Menu.NONE, "Quitter");
 
 		return (super.onCreateOptionsMenu(menu));
@@ -216,6 +212,10 @@ public class MainActivity extends Activity {
 		case ACTU_ID:
 			actualiserWebView();
 			return (true);
+			
+		case AIDE_ID:
+			startActivity(new Intent(this, AideActivity.class));
+			return(true);
 			
 		case QUIT_ID:
 			System.exit(0);
