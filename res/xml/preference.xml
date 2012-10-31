@@ -32,9 +32,9 @@
 	    
 	    <ListPreference 
 	        android:key="pref_sous_groupe"
-	        android:title="Sous-Groupe"
+	        android:title="Sous-groupe"
 	        android:summary="Ouvrir liste de choix"
-	        android:dialogTitle="Sous-Groupe"
+	        android:dialogTitle="Sous-groupe"
 	        android:entries="@array/nom_sous_groupe"
 	        android:entryValues="@array/value_sous_groupe"
 	        android:defaultValue="@string/value_sous_groupe_defaut"
@@ -45,16 +45,16 @@
 	        android:title="Semaine départ"
 	        android:summary="Numéro de la semaine"
 	        android:dialogTitle="Numéro de la semaine"
-	        android:dialogMessage="Numéro de la semaine du début de l'emplois du temps"
+	        android:dialogMessage="Numéro de la semaine du début de l’emploi du temps"
 	        android:defaultValue="33"
 	        />
 	    
 	    <EditTextPreference 
 	        android:key="pref_id_gen"
-	        android:title="Code d'indentification"
-	        android:summary="Code d'intentification"
-	        android:dialogTitle="Code d'indentification générateur d'image"
-	        android:dialogMessage="Code d'indentification pour la genération URL du planning"
+	        android:title="Code d’identification"
+	        android:summary="Code d’identification"
+	        android:dialogTitle="Code d’identification générateur d’image"
+	        android:dialogMessage="Code d’identification pour la genération URL du planning"
 	        android:defaultValue="7f7f85f8426111cc0dc6ad7eb62e7699"
 	        />
 	    
@@ -64,7 +64,7 @@
         <CheckBoxPreference 
             android:key="pref_affichage_auto"
             android:title="Taille automatique"
-            android:summary="Le programme choisie la meilleur taille."
+            android:summary="Le programme choisit la meilleure taille."
             android:defaultValue="true"
             />
     </PreferenceCategory>
@@ -73,43 +73,43 @@
 	    <CheckBoxPreference
 	        android:key="pref_check_lun"
 	        android:title="Lundi"
-	        android:summary="Afficher le Lundi"
+	        android:summary="Afficher le lundi"
 	        android:defaultValue="true"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_mar"
 	        android:title="Mardi"
-	        android:summary="Afficher le Mardi"
+	        android:summary="Afficher le mardi"
 	        android:defaultValue="true"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_mer"
 	        android:title="Mercredi"
-	        android:summary="Afficher le Mercredi"
+	        android:summary="Afficher le mercredi"
 	        android:defaultValue="true"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_jeu"
 	        android:title="Jeudi"
-	        android:summary="Afficher le Jeudi"
+	        android:summary="Afficher le jeudi"
 	        android:defaultValue="true"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_ven"
 	        android:title="Vendredi"
-	        android:summary="Afficher le Vendredi"
+	        android:summary="Afficher le vendredi"
 	        android:defaultValue="true"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_sam"
 	        android:title="Samedi"
-	        android:summary="Afficher le Samedi"
+	        android:summary="Afficher le samedi"
 	        android:defaultValue="false"
 	       	/>
 	    <CheckBoxPreference
 	        android:key="pref_check_dim"
 	        android:title="Dimanche"
-	        android:summary="Afficher le Dimanche"
+	        android:summary="Afficher le dimanche"
 	        android:defaultValue="false"
 	       	/>
 	</PreferenceCategory>
